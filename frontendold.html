@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clarity</title>
+        <style>
+            body {
+                background-color: beige;
+                margin: 0;
+                
+            }
+            #tab-bar {
+                display: flex;
+                color: red;
+                width: 50%;
+                
+            }
+            .tab {
+                width: inherit;
+            }
+            .tab:nth-of-type(even) {
+                background-color: red;
+
+            }
+            .tab:nth-of-type(odd) {
+                background-color: blue;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="tab-bar">
+            <div class="tab" id="tab-1"> </div>
+            <div class="tab">two</div>
+            <div class="tab">three</div>
+        </div>
+        <button id="new-tab-button">+</button>
+        <script>
+            function addNewTab() {
+                tabBar.innerHTML += '<div class="tab">new tab</div>';
+            }
+            const tabBar = document.getElementById("tab-bar");
+            document.getElementById("new-tab-button").addEventListener("mouseenter", addNewTab);
+        </script>
+    </body>
+</html>

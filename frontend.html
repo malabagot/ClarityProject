@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            StraightForward
+        </title>
+        <style>
+            * {
+                box-sizing: border-box;
+                scrollbar-width: none;
+            }
+            html {
+                height: 100%;
+            }
+            body {
+                background-image: url("Background.jpg");
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+                padding: 5%;EEE
+            }
+
+
+            #maincard {
+                display: flex;
+                height: 100%;
+                width: 100%;
+                background-color: whitesmoke;
+                /*outline-style: solid;
+                outline-width: 5%;
+                outline-color: black;*/
+                border-radius: 25px;
+                box-shadow: 8px 8px 30px -5px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 8px 8px 30px -5px rgba(0,0,0,0.75);
+                -moz-box-shadow: 8px 8px 30px -5px rgba(0,0,0,0.75);
+            }
+            
+            #leftside {
+                width: 50%;
+                height: 100%;
+                padding: 5%;
+                overflow: hidden
+            }
+
+            #rightside {
+                width: 50%;
+                height: 100%;
+                padding: 3%;
+            }
+
+            #greetingbox {
+                display: flexbox;
+                justify-content: center;
+                width: 100%;
+                height: 45%;
+                padding: 3px 1px;
+                /*outline-style: solid;
+                outline-width: 1px;
+                outline-color: rgb(204, 204, 204); */
+                background-color: white;
+                margin-bottom: 5%;
+                border-radius: 15px;
+                box-shadow: 0px 2px 28px -4px rgba(0,0,0,0.35);
+                -webkit-box-shadow: 0px 2px 28px -4px rgba(0,0,0,0.35);
+                -moz-box-shadow: 0px 2px 28px -4px rgba(0,0,0,0.35);
+                z-index: 1;
+            }
+
+            .bubblebox {
+                display: flexbox;
+                width: 100%;
+                height: 55%;
+                padding: 10px;
+                background-color: rgb(138, 138, 138);
+                border-radius: 15px;
+                box-shadow: 0px 2px 28px -4px rgba(0,0,0,0.35);
+                -webkit-box-shadow: 0px 2px 28px -4px rgba(0,0,0,0.35);
+                -moz-box-shadow: 0px 2px 28px -4px rgba(0,0,0,0.35);
+            }
+
+            .bubble {
+                border-radius: 50%;
+                background-color: rgb(255, 255, 255);
+                width: 20%;
+                aspect-ratio: 1/1;
+                outline-style: dotted;
+                outline-width: 5%;
+                outline-color: black;
+            }
+            
+            #rightCard {
+                display: flex;
+                flex-direction: row;
+                background-color: white;
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                box-shadow: 0px 2px 28px -4px rgba(0,0,0,0.35);
+                -webkit-box-shadow: 0px 2px 28px -4px rgba(0,0,0,0.35);
+                -moz-box-shadow: 0px 2px 28px -4px rgba(0,0,0,0.35);
+            }
+            
+            #miniCalendar {
+                
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                height: 100%;
+                overflow: auto;
+
+            }
+
+            .calendarTask {
+                flex: 0 0 auto;
+                display: flexbox;
+                width: 95%;
+                height: 100px;
+                padding: 10px;
+                margin-top: 10px;
+                margin-left: 2.5%;
+                background-color: rgb(238, 235, 196);
+                border-radius: 15px;
+                
+                
+
+            }
+
+            #todoPopup {
+                background-color: orange;
+                height: 100%;
+                width: 20%;
+                /*margin: 2.5%;*/
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+                /*margin-left: 1.2%;*/
+
+            }
+
+            h1 {
+                font-family: "Comic Sans MS", serif;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id = "maincard">
+            <div id = "leftside">
+                <div id = "greetingbox" style = "text-align: center; transition: all 0.3s ease;";>
+                    <h1>Hi, </h1>
+                    <img src="https://see.fontimg.com/api/rf5/yYKAY/Mzk0NWY3MWEzMjlkNDZhODg1M2VhYjdlYTIwNjBjOWIudHRm/TWFsYWNoaQ/gc-milan-headline-demo-bd-subhe.png?r=fs&h=81&w=1250&fg=000000&bg=FFFFFF&tb=1&s=65" alt="Serif fonts" style = "width: 60%;">
+                </div>
+                <div class = "bubblebox">
+                    <div class = "bubble"></div>
+                    <div class = "bubble"></div>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+            <div id = "rightside">
+                <div id = "rightCard">
+                    <div id = "miniCalendar">
+                        <div class = "calendarTask"></div>
+                        <div class = "calendarTask"></div>
+                        <div class = "calendarTask"></div>
+                        <div class = "calendarTask"></div>
+                        <div class = "calendarTask"></div>
+                        <div class = "calendarTask"></div>
+                        <div class = "calendarTask"></div>
+                    </div>
+                    <div id = "todoPopup"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById("greetingbox").addEventListener("mouseenter", function() {
+                greetingbox.style.height = "400px";
+            });
+            document.getElementById("greetingbox").addEventListener("mouseleave", function() {
+                greetingbox.style.height = "250px";
+            });
+            document.getElementById("bubblebox").addEventListener("mouseenter", function() {
+                bubblebox.style.height = "400px";
+            });
+            document.getElementById("bubblebox").addEventListener("mouseleave", function() {
+                bubblebox.style.height = "250px";
+            });
+        </script>
+    </body>
+</html>
+
+
