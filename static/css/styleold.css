@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            StraightForward
-        </title>
-        <style>
-            * {
+ * {
                 box-sizing: border-box;
                 scrollbar-width: none;
             }
@@ -13,39 +6,49 @@
                 height: 100%;
             }
             body {
-                background-image: url("Background.jpg");
+                background-image: url("/static/images/Background.jpg");
                 background-size: cover;
                 height: 100%;
                 width: 100%;
                 padding: 5%;
             }
 
+        
 
             #maincard {
                 display: flex;
                 height: 100%;
                 width: 100%;
-                background-color: whitesmoke;
+                background-color: white;
+                background-image: url("/static/images/CardMadterial.jpg");
+                padding: 2%;
                 /*outline-style: solid;
                 outline-width: 5%;
                 outline-color: black;*/
-                border-radius: 25px;
-                box-shadow: 8px 8px 30px -5px rgba(0,0,0,0.75);
-                -webkit-box-shadow: 8px 8px 30px -5px rgba(0,0,0,0.75);
-                -moz-box-shadow: 8px 8px 30px -5px rgba(0,0,0,0.75);
+                border-radius: 50px;
+                box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.75);
+                -webkit-box-shadow: 0px 0px 30px -5px rgba(44, 21, 1, 0.75);
+                -moz-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
             }
             
             #leftside {
-                width: 50%;
+                display: flexbox;
+                width: 120%;
                 height: 100%;
-                padding: 5%;
-                overflow: hidden
+                padding: 2%;
+                margin-right: 2%;
+                border-radius: 8%;
+                background-color: antiquewhite;
             }
 
             #rightside {
-                width: 50%;
+                display: flexbox;
+                flex-direction: row;
+                width: 100%;
                 height: 100%;
-                padding: 3%;
+                padding: 2%;
+                border-radius: 5%;
+                background-color: antiquewhite;
             }
 
             #greetingbox {
@@ -104,9 +107,10 @@
                 
                 display: flex;
                 flex-direction: column;
-                width: 80%;
+                width: 100%;
                 height: 100%;
                 overflow: auto;
+                /*background-color: aliceblue;*/
 
             }
 
@@ -118,8 +122,8 @@
                 padding: 10px;
                 margin-top: 10px;
                 margin-left: 2.5%;
-                background-color: rgb(238, 235, 196);
-                border-radius: 15px;
+                background-color: rgb(251, 250, 247);
+                border-radius: 70px;
                 
                 
 
@@ -139,54 +143,3 @@
             h1 {
                 font-family: "Comic Sans MS", serif;
             }
-        </style>
-
-    </head>
-    <body>
-        <div id = "maincard">
-            <div id = "leftside">
-                <div id = "greetingbox" style = "text-align: center; transition: all 0.3s ease;";>
-                    <h1>Hi, </h1>
-                    <img src="https://see.fontimg.com/api/rf5/yYKAY/Mzk0NWY3MWEzMjlkNDZhODg1M2VhYjdlYTIwNjBjOWIudHRm/TWFsYWNoaQ/gc-milan-headline-demo-bd-subhe.png?r=fs&h=81&w=1250&fg=000000&bg=FFFFFF&tb=1&s=65" alt="Serif fonts" style = "width: 60%;">
-                </div>
-                <div class = "bubblebox">
-                    <div class = "bubble"></div>
-                    <div class = "bubble"></div>
-                </div>
-                <div>
-                    
-                </div>
-            </div>
-            <div id = "rightside">
-                <div id = "rightCard">
-                    <div id = "miniCalendar">
-                        <div class = "calendarTask"></div>
-                        <div class = "calendarTask"></div>
-                        <div class = "calendarTask"></div>
-                        <div class = "calendarTask"></div>
-                        <div class = "calendarTask"></div>
-                        <div class = "calendarTask"></div>
-                        <div class = "calendarTask"></div>
-                    </div>
-                    <div id = "todoPopup"></div>
-                </div>
-            </div>
-        </div>
-        <script>
-            document.getElementById("greetingbox").addEventListener("mouseenter", function() {
-                greetingbox.style.height = "400px";
-            });
-            document.getElementById("greetingbox").addEventListener("mouseleave", function() {
-                greetingbox.style.height = "250px";
-            });
-            document.getElementById("bubblebox").addEventListener("mouseenter", function() {
-                bubblebox.style.height = "400px";
-            });
-            document.getElementById("bubblebox").addEventListener("mouseleave", function() {
-                bubblebox.style.height = "250px";
-            });
-        </script>
-    </body>
-</html>
-
-

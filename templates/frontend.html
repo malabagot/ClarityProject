@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>
+            StraightForward
+        </title>
+    </head>
+    <body>
+        <div id = "maincard">
+            <div id = "leftside">
+                <div id = "greetingbox" style = "text-align: center; transition: all 0.3s ease;";>
+                    <h1>Hi, </h1>
+                    <img src="https://see.fontimg.com/api/rf5/yYKAY/Mzk0NWY3MWEzMjlkNDZhODg1M2VhYjdlYTIwNjBjOWIudHRm/TWFsYWNoaQ/gc-milan-headline-demo-bd-subhe.png?r=fs&h=81&w=1250&fg=000000&bg=FFFFFF&tb=1&s=65" alt="Serif fonts" style = "width: 60%;">
+                </div>
+                <div class = "bubblebox">
+                    <div class = "bubble"></div>
+                    <div class = "bubble"></div>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+            <div id = "rightside">
+                <div id = "rightCard">
+                    <div id = "miniCalendar">
+                        <div class = "calendarTask"></div>
+                        <div class = "calendarTask"></div>
+                        <div class = "calendarTask"></div>
+                        <div class = "calendarTask"></div>
+                        <div class = "calendarTask"></div>
+                        <div class = "calendarTask"></div>
+                        <div class = "calendarTask"></div>
+                    </div>
+                    <div id = "todoPopup"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById("greetingbox").addEventListener("mouseenter", function() {
+                greetingbox.style.height = "400px";
+            });
+            document.getElementById("greetingbox").addEventListener("mouseleave", function() {
+                greetingbox.style.height = "250px";
+            });
+            document.getElementById("bubblebox").addEventListener("mouseenter", function() {
+                bubblebox.style.height = "400px";
+            });
+            document.getElementById("bubblebox").addEventListener("mouseleave", function() {
+                bubblebox.style.height = "250px";
+            });
+        </script>
+    </body>
+</html>
+
+

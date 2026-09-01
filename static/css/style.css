@@ -1,0 +1,143 @@
+    * {
+        box-sizing: inherit;
+    }
+    @font-face {
+        font-family:"welcome_font_1";
+        src: url('/static/fonts/RittokeThinThin-rvEPp.ttf') format('truetype');
+    }
+    @font-face {
+        font-family:"welcome_font_2";
+        src: url('/static/fonts/K22AthenianWide-El9e.ttf') format('truetype');
+    }
+    @keyframes slideIn{
+        from{transform: translate(var(--from_x,0),var(--from_y,0));
+            opacity: 0;
+        }
+        to{transform: translate(var(--to_x,0),var(--to_y,0));
+            opacity: 1;
+        }
+    }
+    html{
+        height: 100%;
+        box-sizing: border-box;
+    }
+    body{
+        padding: 15px;
+        margin: 0px;
+        background-color: rgb(245, 245, 227);
+        height: 100%;
+        width: 100%;
+    }
+    .boxText{
+        font-family:"welcome_font_1",sans-serif;
+        line-height: 0;
+        z-index: 1;
+        z-index: 1;
+        align-self: center;
+        position: relative;
+        font-size: 800%;
+        animation-name: slideIn;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: both;
+    }
+    h2{
+        font-family:"welcome_font_2",sans-serif;
+        line-height: 0;
+        z-index: 1;
+
+    }
+    #gridContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* 3 columns */
+        grid-template-rows: 1fr 1fr 1fr 1fr;    /* 2 rows, each 200px tall */
+        gap: 10px;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        background: transparent;
+        
+    }
+    .gridBox{
+        display: flex;
+        position: relative;
+        z-index: 5;
+        overflow: hidden;
+        border: 4px solid rgb(0, 0, 0);
+        outline: 8px solid rgb(245, 245, 227);
+        background: transparent;
+        transition:all ease-in-out 0.2s;
+        justify-content: center;
+        align-items: stretch;
+        align-self: stretch;
+        flex: 1;
+        flex-direction: column;
+        border-radius: 2px;
+
+    }
+    .gridBox.button{
+        cursor: pointer;
+        z-index: 10;
+        outline-width: 3.5px;
+        .inputWindowText { opacity: 0;};
+        .inputBox { opacity: 0;};
+
+
+    }
+    .gridBox.gridBox.button:hover{
+        transform: scale(1.04);
+        .boxText { opacity: 0;};
+        .inputWindowText { opacity: 1;};
+        .inputBox { opacity: 1;}; 
+    }
+    .invisibleAnimationBox{
+        display: flex;
+        position: relative;
+        z-index: 5;
+        background: transparent;
+        transition:all ease-in-out 0.2s;
+        animation-name: slideIn;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: both;
+        justify-content: center;
+        align-items: center;
+    }
+    .windowPaneText{
+        display: span;
+        z-index: 1;
+        justify-self: center;
+        align-self: center;
+        position: relative;
+    }
+    .inputWindowText{
+        font-family:"welcome_font_1", sans-serif;
+        font-size: small;
+        display: flexbox;
+        text-align: center;
+        line-height: 1;
+
+    }
+    .inputBox{
+        display:flex;
+        text-align: center;
+        border:  3px dashed rgb(0, 0, 0);
+        outline: none;
+        border-radius: 7px;
+        width: 40%;
+        align-self: center;
+        font-size: 140%;
+        background: transparent;
+        flex-direction: row;
+    }
+    .inputBoxBabies{
+        outline:none;
+        border:none;
+        background: transparent;
+        flex: auto;
+        justify-content: center;
+        align-items: center;
+        min-width: 0;
+        text-align: center;
+
+    }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clarity</title>
+    <!-- invisible to the user, metadata about the page -->
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <div id = 'maincard'>
+        <div id= 'leftside'>
+            <div id = 'miniCalendar'>
+              {% for event in events %}
+              <div class="calendarTask">
+                <h2>{{ event.title }}</h2>
+                <p>{{ event.start_time }}</p>
+                <p>{{ event.description }}</p>
+            </div>
+            {% endfor %}
+                
+
+            </div>
+        </div>
+        <div id= 'rightside'></div>
+    </div>
+
+  </body>
+</html>
