@@ -7,7 +7,7 @@ Full stack productivity App made to encourage diligence and reduce decision fati
 - MySQL database; talked to using SQLAlchemy.
 ## Best Parts
 - Built completely solo from the ground up.
-- Google O Auth 2.0 Calendar integration using stored tokens and cookie generation.
+- Google OAuth 2.0 Calendar integration using stored tokens and cookie generation.
 - Application-factory architecture used to avoid circular imports and keep things modular.
 - Custom interface with animations.
 ## Planned Features
