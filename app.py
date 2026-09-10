@@ -2,9 +2,12 @@ from flask import Flask, render_template, request, jsonify
 from event_models import Event
 from sqlalchemy_object import db
 from sleep_database_handler import sleep_storer
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@127.0.0.1:3306/clarity'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 db.init_app(app)
 
 @app.route('/')
