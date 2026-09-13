@@ -4,6 +4,10 @@ from sqlalchemy_object import db
 from sleep_database_handler import sleep_storer
 from dotenv import load_dotenv
 import os
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 load_dotenv()
 
 app = Flask(__name__)
@@ -12,15 +16,17 @@ db.init_app(app)
 
 @app.route('/')
 def index():
-    events = Event.query.all()
-    return render_template('index.html',events=events)
+    #events = Event.query.all()
+    return render_template('index.html',)#events=events)
 
 @app.route('/sleep', methods=["POST"])
 def sleep():
     data = request.get_json()
     sleep_storer(data)
     return jsonify({"ok": True})
-
+@app.route('/2ndpage')
+def second_page():
+    return render_template('page2.html')
 
 
 if __name__ == '__main__':

@@ -19,7 +19,7 @@ def main():
     with app.app_context():
     
         #Sets the credentials to None for accessing the api
-        creds = None
+        creds = None 
 
 
 
@@ -72,7 +72,7 @@ def main():
             events_result = api_result['items']
             if events_result:
                 print("Non empty event dictionary recieved")
-                event_storer(events_result)
+                #event_storer(events_result)
             else:
                 print("Theres no events in the next week=================================================")
 
